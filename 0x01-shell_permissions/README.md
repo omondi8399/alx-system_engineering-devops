@@ -1,1 +1,1 @@
-My name is Betty
+Readme for 0x01. Shell, permissions
