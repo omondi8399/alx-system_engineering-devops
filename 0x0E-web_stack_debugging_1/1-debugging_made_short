@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script to fix nginx web server faster
-sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+# Fix for the second web stack debugging_1 server
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
-pkill -o nginx
+sudo sed -i 's,pid /run/nginx.pid,pid /run/nginx.bak,' /etc/nginx/nginx.conf
