@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fix for the second web stack debugging_1 server
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
-rm /run/nginx.pid
+# configures a server to listening on port 80 of all server's active IPv4 IPs
+
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
